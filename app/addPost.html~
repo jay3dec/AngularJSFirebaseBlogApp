@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Tech Illumination</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/blog.css" rel="stylesheet">
+
+    
+    
+  </head>
+
+  <body ng-app="myApp">
+
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="blog-nav">
+          <a class="blog-nav-item " href="#">Home</a>
+          <a class="blog-nav-item active" href="addPost.html">Add Post</a>
+          
+        </nav>
+      </div>
+    </div>
+
+    <div class="container" ng-controller="MyCtrl1">
+
+      <form class="form-horizontal" ng-submit='addPost()'>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Create Post</legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="txtTitle">Title</label>  
+  <div class="col-md-4">
+  <input id="txtTitle" name="txtTitle" ng-model="article.title" type="text" placeholder="placeholder" class="form-control input-md">
+    
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="txtPost">Post</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="txtPost" name="txtPost" ng-model="article.post"></textarea>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <input id="singlebutton" name="singlebutton" ng-disabled="article.title==undefined||article.title=='' || article.post=='' || article.post==undefined" class="btn btn-primary" type="submit" value="Publish" />
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+    </div><!-- /.container -->
+
+    <div class="blog-footer">
+       <p>TechIllumination Blog App <a href="http://www.techillumination.in"></a> by <a href="https://twitter.com/jay3dec">@jay3dec</a>.</p>
+    
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/docs.min.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+  <script src="../bower_components/angular-route/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+  </body>
+</html>
+
